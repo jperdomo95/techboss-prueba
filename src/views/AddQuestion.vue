@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-toolbar outlined color="grey lighten-5" class="elevation-0 d-flex justify-center">
+    <v-toolbar outlined color="grey lighten-5" class="elevation-0 d-flex">
       <v-btn
         filled
         color="primary"
@@ -14,17 +14,19 @@
       <span>Nuestros productos</span>
     </v-toolbar>
     <div class="py-5">
-      <products-list></products-list>
+
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ProductsList from '@/components/ProductsList'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Home',
-  components: { ProductsList }
+  computed: {
+    ...mapGetters(['products'])
+  }
 }
 </script>

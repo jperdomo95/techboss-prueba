@@ -8,7 +8,7 @@
       <!--  -->
     </v-navigation-drawer>
 
-    <v-app-bar app outlined class="elevation-0 bg-transparent">
+    <v-app-bar app outlined class="elevation-0">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Centro de Ayuda Seif</v-toolbar-title>

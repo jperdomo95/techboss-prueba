@@ -34,15 +34,13 @@
 </template>
 
 <script>
-// import ProductDetail from './ProductDetail'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'ProductsList',
   // components: { ProductDetail },
-  props: {
-    products: {
-      required: true,
-      type: Array
-    }
+  computed: {
+    ...mapGetters(['products'])
   }
 }
 </script>
