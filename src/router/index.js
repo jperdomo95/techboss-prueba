@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PageNotFound from '@/views/PageNotFound'
 import Home from '@/views/Home.vue'
 import AddQuestion from '@/views/AddQuestion.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '*',
+    component: PageNotFound
+  },
   {
     path: '/',
     name: 'Home',
