@@ -24,6 +24,7 @@
                 class="px-10"
                 elevation="2"
                 rounded
+                color="primary"
               >Ver</v-btn>
             </div>
           </v-card>

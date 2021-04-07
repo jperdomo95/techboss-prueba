@@ -3,7 +3,7 @@ const rulesMixin = {
     return {
       rules: {
         product: v => !!(v || '') || 'Por favor seleccione un producto',
-        module: v => !!(v || '') || 'Por favor seleccione un módule',
+        module: v => !!(v || '') || 'Por favor seleccione un módulo',
         category: v => !!(v || '') || 'Por favor seleccione una categoría',
         environment: v => !!(v || '') || 'Por favor seleccione un entorno',
         question: v => !!(v || '') || 'Por favor introduzca una pregunta',

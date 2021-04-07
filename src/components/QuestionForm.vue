@@ -1,7 +1,7 @@
 <template>
   <v-card>
-    <v-card-title outlined color="blue">Material de apoyo</v-card-title>
-    <v-form ref="questionForm" @submit.prevent="submitQuestion">
+    <v-toolbar color="headforms" class="elevation-0 primary--text d-flex justify-center">Material de apoyo</v-toolbar>
+    <v-form class="mt-5" ref="questionForm" @submit.prevent="submitQuestion">
       <v-container>
         <v-row class="mb-0">
           <v-col cols="1">

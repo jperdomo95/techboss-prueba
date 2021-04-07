@@ -5,11 +5,11 @@
       app
       :mini-variant.sync="mini"
     >
-      <!--  -->
+      <v-list-item>S</v-list-item>
     </v-navigation-drawer>
 
-    <v-app-bar app outlined class="elevation-0">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar app outlined color="primary" class="white--text elevation-0">
+      <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Centro de Ayuda Seif</v-toolbar-title>
     </v-app-bar>
