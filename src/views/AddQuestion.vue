@@ -9,9 +9,18 @@
     </v-toolbar>
     <div class="py-5">
       <v-container>
-        <question-form></question-form>
+        <question-form @questionAdded="showModal = true"></question-form>
       </v-container>
     </div>
+    <v-dialog
+      v-model="showModal"
+      width="300"
+    >
+      <v-card class="d-flex align-center flex-column py-10">
+        <v-icon color="success" size="100px">mdi-check-circle-outline</v-icon>
+        <span>Pregunta creada</span>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -30,10 +39,10 @@ export default {
           href: '/'
         },
         {
-          text: 'Añadir material de apoyo',
-          href: '/material-de-apoyo'
+          text: 'Añadir material de apoyo'
         }
-      ]
+      ],
+      showModal: false
     }
   }
 }

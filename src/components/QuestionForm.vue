@@ -92,7 +92,7 @@
         </v-row>
         <v-row class="d-flex justify-center mb-5">
           <v-btn color="primary" class="mr-5" type="submit">Añadir</v-btn>
-          <v-btn>Cancelar</v-btn>
+          <v-btn to="/">Cancelar</v-btn>
         </v-row>
       </v-container>
     </v-form>
@@ -101,7 +101,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import rulesMixin from '@/mixins/rulesMixin.js'
 export default {
+  mixins: [rulesMixin],
   data () {
     return {
       question: {
@@ -111,14 +113,6 @@ export default {
         environment: '',
         question: '',
         answer: ''
-      },
-      rules: {
-        product: v => !!(v || '') || 'Por favor seleccione un producto',
-        module: v => !!(v || '') || 'Por favor seleccione un módule',
-        category: v => !!(v || '') || 'Por favor seleccione una categoría',
-        environment: v => !!(v || '') || 'Por favor seleccione un entorno',
-        question: v => !!(v || '') || 'Por favor introduzca una pregunta',
-        answer: v => !!(v || '') || 'Por favor introduzca una respuesta'
       }
     }
   },
@@ -130,6 +124,8 @@ export default {
     submitQuestion () {
       if (this.$refs.questionForm.validate()) {
         this.addQuestion(this.question)
+        this.$emit('questionAdded')
+        this.$refs.questionForm.reset()
       }
     }
   }
